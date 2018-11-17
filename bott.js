@@ -5,7 +5,7 @@ const prefix = "M";
 
 
 client.on('message',async message => {
-  if(message.author.bot || message.channel.type === prefix'bc') return;
+  if(message.author.bot || message.channel.type === 'Mbc') return;
   let args = message.content.split(' ');
   if(args[0] === `${prefix}bc`) {
     if(!message.member.hasPermission("MANAGE_GUILD")) return message.channel.send('- **أنت لا تملك الصلاحيات اللازمة لأستخدام هذا الأمر**');
@@ -29,6 +29,13 @@ client.on('message',async message => {
     });
   }
 });
+
+
+
+
+
+
+
 
 
 client.login(process.env.BOT_TOKEN);
