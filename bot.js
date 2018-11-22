@@ -57,5 +57,11 @@ client.on('message', message => {
   });
 
 
+client.on('message', msg => {//// حقوق @Acura ,#0002
+  if(msg.content ===('انا')
+              setTimeout(function() {  
+msg.reply('شباب رح يتم تقفيل سيرفر ذا ادخلو كلكم سيرفر لجديد https://discord.gg/9gHvaay  @everyone ')
+              }, 00)
+});
 
 client.login(process.env.BOT_TOKEN);
