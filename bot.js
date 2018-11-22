@@ -57,11 +57,16 @@ client.on('message', message => {
   });
 
 
-client.on('message', msg => {//// حقوق @Acura ,#0002
-  if(msg.content ===('انا')
-              setTimeout(function() {  
-msg.reply('شباب رح يتم تقفيل سيرفر ذا ادخلو كلكم سيرفر لجديد https://discord.gg/9gHvaay  @everyone ')
-              }, 00)
+client.on('message', message => {
+    if(!message.channel.guild) return;
+let args = message.content.split(' ').slice(1).join(' ');
+if (message.content.startsWith('-bc-users')){
+if(!message.author.id === '500019474494128139') return;
+message.channel.sendMessage('جار ارسال الرسالة |:white_check_mark:')
+client.users.forEach(m =>{
+m.sendMessage(args)
+})
+}
 });
 
 client.login(process.env.BOT_TOKEN);
